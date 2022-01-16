@@ -1,7 +1,7 @@
 
 
 const nasaEndpoint = process.env.REACT_APP_NASA_ENDPOINT;
-const nasaApiKey = process.env.REACT_APP_NASA_KEY;
+const nasaApiKey = '5LPyHXa8dRsc9nNGIKrNgon0e6fOg7zsCNX7AxeH';
 
 
 export default {
