@@ -28,7 +28,7 @@ class LikedPhoto extends React.Component{
             </div>
             <div id="explore">
                 You have reached the end :)<br />
-                Go back to the <Link to="/">home page</Link> to find out more amazing photos of the space!
+                Go back to the <Link to="/spacestagram">home page</Link> to find out more amazing photos of the space!
             </div>
             </div>
         </div>);
