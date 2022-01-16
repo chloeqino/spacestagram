@@ -10,8 +10,8 @@ function App() {
  
       <div className="app">
         <Routes>
-          <Route element={<Home />} path="/" />
-          <Route element={<LikedPhoto />} path="/likes" />
+          <Route element={<Home />} path="/spacestagram/" />
+          <Route element={<LikedPhoto />} path="/spacestagram/likes" />
           </Routes>
           <NanBar />
       </div>
