@@ -7,6 +7,7 @@ console.log(apiKey);
 export default function NasaPhoto(props) {
   const [photoData, setPhotoData] = useState(null);
   const [liked, setLiked] = useState(false);
+  const [animated, setAnimated] = useState(false);
   console.log(props);
  //console.log(props);
  function handleLiked(){
@@ -15,6 +16,8 @@ export default function NasaPhoto(props) {
      new ServiceWorker().unLike(photoData.date);
    }else{
     new ServiceWorker().addLiked(photoData.date);
+    setAnimated(true);
+    setTimeout(()=>{setAnimated(false)},200);
    }
    console.log(new ServiceWorker().LikedPhoto);
 
@@ -64,9 +67,10 @@ if (!photoData) return <div>Loading</div>;
       <div className="useraction">
       <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="-3 0 45 45"><path 
       onClick = {(e)=>{setLiked(!liked);
-      handleLiked()}} className={`heart ${liked ? "fill":""}`} stroke="black" d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
+      handleLiked()}} className={`heart ${liked ? "fill":""} ${animated ? "animated":""}`} stroke="black" d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
 <a className="twitter-share-button"
-  href={`https://twitter.com/intent/tweet?text=${photoData.title}&url=${photoData.url}`} data-size="large" target="_blank">
+  href={`https://twitter.com/intent/tweet?text=${photoData.title}&url=${photoData.url}`} 
+   data-size="large" target="_blank">
 Tweet</a>
 
       </div>
