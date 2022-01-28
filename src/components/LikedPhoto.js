@@ -18,12 +18,7 @@ class LikedPhoto extends React.Component{
             <div className="wrapper">
                 <div id="totallikes"><strong>{this.gallery.length}</strong> Likes</div>
             <div id="gallery">
-                 <div className="col">
-                     {this.gallery.filter((e,i)=>{return i%2==0})}
-                 </div>
-                 <div className="col">
-                 {this.gallery.filter((e,i)=>{return i%2!=0})}
-                 </div>
+                 {this.gallery}
             
             </div>
             <div id="explore">

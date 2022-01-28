@@ -17,14 +17,14 @@ function dateFormatter(dateObject){
   return yearstring+"-"+monthstring+"-"+datestring;
 }
 
-let initalgallery = [...Array(10).keys()].map((e,i)=>{
+let initalgallery = [...Array(6).keys()].map((e,i)=>{
     return <NasaPhoto key ={`photo${i}`} photodate={dateFormatter(travelBack(e))} />;
 });
 
 console.log(initalgallery);
 export default function Home(){
-    const [num,setNum] = useState(10);
-    const [start,setStart] = useState(10);
+    const [num,setNum] = useState(5);
+    const [start,setStart] = useState(6);
     const [gallery,setGallery] = useState([...initalgallery]);
     const [visible, setVisible] = useState(false)
    console.log(gallery);
@@ -68,10 +68,7 @@ export default function Home(){
         // Update the document title using the browser API
       // LoadMore();
       });
-    return (
-        <div className="home">
-           
-             <div id="gallery" className="wrapper">
+      /* <div id="gallery" className="wrapper desktop">
                  <div className="col">
                      {gallery.filter((e,i)=>{return i%2==0})}
                  </div>
@@ -79,8 +76,18 @@ export default function Home(){
                  {gallery.filter((e,i)=>{return i%2!=0})}
                  </div>
             
-            </div>
+            </div> */
+    return (
+        <div className="home">
            
+            
+            
+            <div id="gallery" className="wrapper">
+                 
+                     {gallery}
+                
+            
+            </div>
             <button onClick={()=>LoadMore()} id="loadmore">More</button>
         </div>
     );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import HttpClient from "../HttpClient";
 import ServiceWorker from "../serviceWorker";
+import ReadMore from "./readmore";
 const apiKey = process.env.REACT_APP_NASA_KEY;
 console.log(apiKey);
 
@@ -63,8 +64,8 @@ if (!photoData) return <div>Loading</div>;
       <h2>{photoData.title}</h2>
       <date datetime={photoData.date}>{photoData.date}</date>
        
-        <p className="explaination">{photoData.explanation}</p>
-     
+        
+     <ReadMore content={photoData.explanation} num={100} className="explaination" />
       <div className="useraction">
       <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="-3 0 45 45"><path 
       onClick = {(e)=>{setLiked(!liked);
