@@ -60,7 +60,8 @@ if (!photoData) return <div>Loading</div>;
         />
       <div>
         <div className="info">
-      <h2>{photoData.title} - {photoData.date}</h2>
+      <h2>{photoData.title}</h2>
+      <date datetime={photoData.date}>{photoData.date}</date>
        
         <p className="explaination">{photoData.explanation}</p>
      
