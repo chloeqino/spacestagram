@@ -9,11 +9,12 @@ function App() {
   return (
  
       <div className="app">
+        <NanBar />
         <Routes>
           <Route element={<Home />} path="/spacestagram/" />
           <Route element={<LikedPhoto />} path="/spacestagram/likes" />
           </Routes>
-          <NanBar />
+          
       </div>
     
   );
