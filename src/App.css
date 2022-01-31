@@ -333,7 +333,7 @@ button.underline{
 }
 .nasa-photo img, .nasa-photo iframe{
   height: auto;
-  object-fit: none;
+  object-fit: contain;
 }
 
 }
