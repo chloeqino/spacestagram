@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Notes
+this site is live at [https://chloeqino.github.io/spacestagram/](https://chloeqino.github.io/spacestagram/)
 
 ## Available Scripts
 
