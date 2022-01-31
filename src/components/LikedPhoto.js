@@ -22,8 +22,11 @@ class LikedPhoto extends React.Component{
             
             </div>
             <div id="explore">
-                You have reached the end :)<br />
-                Go back to the <Link to="/spacestagram/">home page</Link> to find out more amazing photos of the space!
+                {(this.gallery.length==0)?(<p>You haven't liked any photo yet<br />
+                Go back to the <Link to="/spacestagram/">home page</Link> to explore the space!
+                </p>):
+    (<p>You have reached the end :)<br />
+                Go back to the <Link to="/spacestagram/">home page</Link> to find out more amazing photos of the space!</p>)}
             </div>
             </div>
         </div>);

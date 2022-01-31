@@ -83,6 +83,8 @@ export default function Home(){
            
             
           <div className="home">
+
+            <div className="wrapper" id="attribution">bought to you by <abbr title="National Aeronautics and Space Administration">NASA</abbr>'s <abbr title="Astronomy Picture of the Day">APOD</abbr> API</div>
             <div id="gallery" className="wrapper">
                      {gallery}
                 
