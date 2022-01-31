@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import NasaPhoto from "./NasaPhoto";
-
+import StackGrid from "react-stack-grid";
 import { Button } from './Styles';
 import NanBar from "./NavBar";
 const today = new Date();
@@ -77,18 +77,19 @@ export default function Home(){
                  </div>
             
             </div> */
+            // <div id="gallery" className="wrapper">
     return (
-        <div className="home">
+       
            
             
-            
+          <div className="home">
             <div id="gallery" className="wrapper">
-                 
                      {gallery}
                 
-            
             </div>
+            
             <button onClick={()=>LoadMore()} id="loadmore">More</button>
-        </div>
+            </div>
+       
     );
 }

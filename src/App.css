@@ -10,6 +10,7 @@
 :root{
   --theme-purple: rgb(190, 107, 238);
   --primary:rgb(15, 8, 41);
+  --secondary:rgb(28, 12, 58);
 }
 .App-logo {
   height: 40vmin;
@@ -27,8 +28,8 @@
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  top: 90px;
-  gap: 1%;
+  
+  gap: 2%;
   
    
 }
@@ -48,6 +49,7 @@ body{
 }
 .container{
   background-color: var(--primary);
+  padding-top: 90px;
 }
 #gallery::after, body::after{
   clear: both;
@@ -56,7 +58,7 @@ body{
   float: none;
 }
 #explore{
-  top: 90px;
+  
   position: relative;
   text-align: center;
   font-size: 0.8em;
@@ -84,8 +86,8 @@ body{
   flex-direction: row;
   align-items: center;
   color: whitesmoke;
-  background-color: var(--primary);
-  border-bottom: 2px solid rgb(19, 7, 39);
+  background-color:var(--secondary);
+  border-bottom: 2px solid var(--secondary);
   position: fixed;
   top: 0;
   left:0;
@@ -95,7 +97,10 @@ body{
 
   
 }
-
+#main-nav *{
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
 
 #main-nav a{
   text-decoration: none;
@@ -199,12 +204,12 @@ button{
   background-color: var(--primary);
   color: whitesmoke;
   position: relative;
-  top: 90px;
+ 
   border-color: whitesmoke;
   margin-bottom: 12px;
 }
 .home{
-  
+  padding-top: 90px;
   margin: 0 auto;
   background-color: var(--primary);
 }
@@ -214,13 +219,20 @@ button{
   font-family: sans-serif;
   
 }
-#gallery .nasa-photo{
-  display: inline-block;
-  width:32%;
+
+.nasa-photo img{
+width: 100%;
+}
+.nasa-photo{
+  display: inline-flex;
+   position: relative;
+   width: 32%;
   padding: 0;
  overflow: hidden;
+  flex-direction: column;
   align-self: center;
   margin-bottom: 20px;
+  box-shadow: 1px 3px 5px 1px rgba(225, 225, 250,0.8);
   border: 1px solid rgb(234, 230, 250);
   border-radius: 1%;
   background-color: rgb(234, 230, 250);
@@ -228,25 +240,25 @@ button{
  
 
 }
-#gallery .nasa-photo *{
+.nasa-photo *{
   background-color: rgb(234, 230, 250);
   border: 1px solid rgb(234, 230, 250);
 }
-#gallery .nasa-photo h2{
+.nasa-photo h2{
   font-size: 16px;
 }
-#gallery .nasa-photo .explaination{
+.nasa-photo .explaination{
   font-size: 14px;
 }
-#gallery .nasa-photo .info{
+.nasa-photo .info{
   padding: 12px;
 }
-#gallery .nasa-photo img,#gallery .nasa-photo iframe {
+.nasa-photo img,.nasa-photo iframe {
  width: 100%;
   display: table;
 
 }
-#gallery .nasa-photo.dummy{
+.nasa-photo.dummy{
   height: 300px;
   display: inline-flex;
   flex-direction: row;
@@ -257,6 +269,7 @@ button{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 12px;
 }
 .nasa-photo .useraction a{
   text-decoration: none;

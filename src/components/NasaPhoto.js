@@ -54,19 +54,23 @@ if(photoData=='error') return <div className="nasa-photo dummy">Fail to fetch da
   return (
     
     <div className="nasa-photo">
+      <div className="content">
        {(photoData.media_type!='video')?
         <img
           src={photoData.url}
           alt={photoData.title}
           className="photo"
         />:<iframe src={photoData.url}></iframe>}
-      <div>
+    
         <div className="info">
       <h2>{photoData.title}</h2>
       <date datetime={photoData.date}>{photoData.date}</date>
        
         
      <ReadMore content={photoData.explanation} num={100} className="explaination" />
+     </div>
+     
+      </div>
       <div className="useraction">
       <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="-3 0 45 45"><path 
       onClick = {(e)=>{setLiked(!liked);
@@ -76,9 +80,10 @@ if(photoData=='error') return <div className="nasa-photo dummy">Fail to fetch da
    data-size="large" target="_blank">
 Tweet</a>
 
-      </div>
-      </div>
-      </div>
+      
     </div>
+</div>
+
+   
   );
 }
