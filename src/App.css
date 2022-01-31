@@ -241,10 +241,17 @@ button{
 #gallery .nasa-photo .info{
   padding: 12px;
 }
-#gallery .nasa-photo img{
+#gallery .nasa-photo img,#gallery .nasa-photo iframe {
  width: 100%;
   display: table;
 
+}
+#gallery .nasa-photo.dummy{
+  height: 300px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
 }
 .nasa-photo .useraction{
   display: flex;

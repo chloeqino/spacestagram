@@ -48,17 +48,18 @@ export default function NasaPhoto(props) {
     })
 }, []);
 
-if (!photoData) return <div>Loading</div>;
+if (!photoData) return <div className="nasa-photo dummy">Loading</div>;
+if(photoData=='error') return <div className="nasa-photo dummy">Fail to fetch data :(</div>;
 
   return (
     
     <div className="nasa-photo">
-        
+       {(photoData.media_type!='video')?
         <img
           src={photoData.url}
           alt={photoData.title}
           className="photo"
-        />
+        />:<iframe src={photoData.url}></iframe>}
       <div>
         <div className="info">
       <h2>{photoData.title}</h2>
