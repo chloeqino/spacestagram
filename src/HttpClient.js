@@ -10,7 +10,7 @@ export default {
         `https://api.nasa.gov/planetary/apod?api_key=${nasaApiKey}&date=${setdate}&thumbs=true`,{cache: "default"}
       ).then(res => res.json().then((data)=>{
           console.log("status"+res.status);
-          if(res.status==500){
+          if(res.status>=400&&res.status<=599){
             return 'error'
           }
           return data;
