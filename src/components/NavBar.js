@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes,Link,NavLink } from "react-router-dom";
-import Home from "../components/Home";
+import {AiOutlineRocket} from  "react-icons/ai";
 import LikedPhoto from "./LikedPhoto";
 
 class NanBar extends  React.Component{
@@ -8,7 +8,9 @@ class NanBar extends  React.Component{
         return (
             <nav id="main-nav">
                 <div className="wrapper">
-                <Link to="/spacestagram/" id="logo">Spacestagram</Link>
+                <Link to="/spacestagram/" id="logo">
+                    <AiOutlineRocket />
+                    <span className="mobilehide">Spacestagram</span></Link>
                 <div className="right">
                 <NavLink to = "/spacestagram/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 25 25"><path className="icon" d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z"/></svg>

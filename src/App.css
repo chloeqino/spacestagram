@@ -66,6 +66,10 @@ body{
   margin-bottom: 20px;
   color: #6a696e;
 }
+.home footer{
+  color: #6a696e;
+  text-align: center;
+}
 #explore a{
   color:var(--theme-purple);
 }
@@ -168,6 +172,18 @@ button{
   stroke-width: 3px;
   
 }
+#logo{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+#logo svg{
+  font-size: 1.2em;
+}
+.mobilehide{
+  display: initial;
+}
+
 .heart:hover{
   cursor: pointer;
   stroke:rgb(162, 155, 167);
@@ -175,8 +191,53 @@ button{
 .wrapper{
   width: 75%;
   margin: 0 auto;
+  
+}
+.react-date-picker *{
+  color: white;
+  
+  border-color: transparent;
+}
+#startdatePicker{
+  
+  z-index: 103;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  opacity: 0.9;
+  font-size: 0.9em;
+  transform: translateX(-50%);
+  width: auto;
+  display: table;
+  background-color: transparent;
+  border-color: transparent;
+  padding-top: 20px;
+  
 }
 
+.react-calendar button:hover:not([disabled]){
+  background-color:rgba(127, 107, 238,0.7) !important;
+}
+.react-calendar__navigation button:hover:not([disabled]){
+background: rgba(127, 107, 238,1) !important;
+
+}
+
+.react-date-picker button abbr,.react-date-picker button span{
+  background-color: transparent;
+}
+.react-calendar__tile--active{
+background-color: rgb(127, 107, 238);
+}
+.react-calendar__tile--now{
+ background-color: var(--theme-purple);
+}
+.react-date-picker__button svg{
+  stroke: white;
+}
+.react-date-picker__wrapper {
+  border: 1px solid whitesmoke !important;
+}
 .heart.fill{
   
   
@@ -268,6 +329,9 @@ width: 100%;
   background-color: rgb(15, 9, 31);
 
 }
+#loadmore:disabled{
+  opacity: 0.4;
+}
 .nasa-photo.dummy{
   height: 300px;
   display: inline-flex;
@@ -331,9 +395,16 @@ button.underline{
   display: block;
   width: 100%;
 }
+
 .nasa-photo img, .nasa-photo iframe{
   height: auto;
   object-fit: contain;
 }
 
+}
+@media only screen and (max-width:600px)
+{
+.mobilehide{
+  display: none;
+}
 }

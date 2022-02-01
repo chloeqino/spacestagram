@@ -9,7 +9,7 @@ export default function NasaPhoto(props) {
   const [photoData, setPhotoData] = useState(null);
   const [liked, setLiked] = useState(false);
   const [animated, setAnimated] = useState(false);
-  console.log(props);
+  //console.log(props);
  //console.log(props);
  function handleLiked(){
    console.log(liked);
@@ -24,6 +24,7 @@ export default function NasaPhoto(props) {
 
 
  }
+
   useEffect(() => {
     /*fetchPhoto();
 
@@ -50,6 +51,7 @@ export default function NasaPhoto(props) {
 
 if (!photoData) return <div className="nasa-photo dummy">Loading</div>;
 if(photoData=='error') return <div className="nasa-photo dummy">Fail to fetch data :(</div>;
+
 
   return (
     
